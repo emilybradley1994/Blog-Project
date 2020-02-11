@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block sub_content %}
+
+    <div class = "text-center">
+
+
+        <div class = "container">
+            <hr><h1>Available blogs</h1><hr>
+        </div>
+
+        <div class = "container">
+
+        {% if blogs %}
+            {% for blog in blogs %}
+                <h3><a href = "/blogs/{{ blog[0] }}">{{blog[1]}}</a></h3>
+                <h5>Written by {{blog[2]}}</h5>
+            {% endfor %}
+
+        {% else %}
+            <h3>No available blogs!</h3>
+
+        {% endif %}
+        </div>
+
+    </div>
+
+{% endblock %}
