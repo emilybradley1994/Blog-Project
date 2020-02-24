@@ -3,11 +3,11 @@
 
 {% block sub_content %}
 
-    <div class = "text-center">
+<div class = "text-center">
 
 
-        <div class = "container">
-            <hr><h1>Available blogs</h1><hr>
+        <div class = "container" id = "legend">
+            <legend class="text-center"><h1>Available blogs</h1></legend>
         </div>
 
         <div class = "container">
@@ -22,8 +22,10 @@
             <h3>No available blogs!</h3>
 
         {% endif %}
+        <!-- <img src="{{url_for('static', filename='images/bgimg.jpg')}}" /> -->
         </div>
 
     </div>
 
 {% endblock %}
+
